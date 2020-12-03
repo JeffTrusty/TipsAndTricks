@@ -7,6 +7,7 @@ VS Code:
   Ctrl+,                User Settings
   Ctrl+/                Line Comment Toggle
   Ctrl+B                Toggle side-bar
+  Ctrl+D                Select current word
   Ctrl+W                Close active tab
   Ctrl+Tab              Switch between tabs
   Ctrl+Alt+→            Better Align
