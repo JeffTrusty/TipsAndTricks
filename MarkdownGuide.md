@@ -64,6 +64,10 @@ Number+period or right parenthesis = numbered list
 > 1. List Item
 > 2. List Item
 
+Check Boxes
+- [x] List Item
+- [ ] List Item
+
 [Home](#markdown-guide)
 
 ## Indenting
