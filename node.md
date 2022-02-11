@@ -39,6 +39,7 @@ npm install express
 npm install cors
 npm install body-parser
 npm install -g nodemon
+npm install mongoose // installs mongoose DB package to help with accessing Mongo databases
 ```
 
 ## Basic Node Server Setup
@@ -54,7 +55,7 @@ const app = express();
 //configure app
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cors({ orgin: /http:\/\/localhose/}));
+app.use(cors({ orgin: /http:\/\/localhost/}));
 app.options('*', cors());
 
 

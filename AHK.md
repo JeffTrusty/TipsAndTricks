@@ -28,6 +28,16 @@ Y+=2 ; Adds 2 to numeric variable
 Y-=2 ; Subtracts 2 from numeric variable
 Y++ ; Increments numeric variable
 Y-- ; Decrement numeric variable
+; MultiLine variable
+Name:="Bob"
+Var=
+(
+this
+is "With Quotes"
+and variables: %Name%
+multi line
+variable
+)
 ```
 
 ## Evaluating Conditions
@@ -251,16 +261,18 @@ WinActivate, AFCU.xlsm - Excel
 ;WinKill, [applicationName] ; Force close [applicationName]
 ```
 
-## Multi line variables
+## Run script as admin
 ```AutoHotKey
-Name:="Bob"
-Var=
-(
-this
-is "With Quotes"
-and variables: %Name%
-multi line
-variable
-)
-MsgBox % Var
+if (! A_IsAdmin) {
+  Run *RunAs "%AScriptFullPath%" ; requires AHK v1.0.92.01+
+  ExitApp
+}
+```
+
+## Context sensitivity
+```AutoHotKey
+SetTitleMatchMode,2
+#IfWinActive, [window title]
+  MsgBox In window
+#IfWinActive ; end this context sensitivity
 ```
